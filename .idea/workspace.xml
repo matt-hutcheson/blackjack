@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="286dafa2-7c5f-476e-920b-46beee0724e8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SuitType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Deck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/RankType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/DeckTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/PlayerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/CardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Card.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SuitType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SuitType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CardTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CardTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -33,7 +40,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1kVkl55Z2m7h8yJWvlAZPnwrTde" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -44,12 +53,52 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager">
-    <configuration name="CardTest.cardHasSuit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.DeckTest.canDealCard">
+    <configuration name="CardTest.cardHasValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CardsLab" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CardTest" />
-      <option name="METHOD_NAME" value="cardHasSuit" />
+      <option name="METHOD_NAME" value="cardHasValue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeckTest.canDealCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CardsLab" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DeckTest" />
+      <option name="METHOD_NAME" value="canDealCard" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeckTest.canPopulateDeckOfCards" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CardsLab" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DeckTest" />
+      <option name="METHOD_NAME" value="canPopulateDeckOfCards" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeckTest.canShuffleDeck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CardsLab" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DeckTest" />
+      <option name="METHOD_NAME" value="canShuffleDeck" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeckTest.deckShouldStartEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CardsLab" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DeckTest" />
+      <option name="METHOD_NAME" value="deckShouldStartEmpty" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -57,7 +106,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CardTest.cardHasSuit" />
+        <item itemvalue="JUnit.DeckTest.canDealCard" />
+        <item itemvalue="JUnit.DeckTest.canShuffleDeck" />
+        <item itemvalue="JUnit.DeckTest.canPopulateDeckOfCards" />
+        <item itemvalue="JUnit.DeckTest.deckShouldStartEmpty" />
+        <item itemvalue="JUnit.CardTest.cardHasValue" />
       </list>
     </recent_temporary>
   </component>
@@ -73,5 +126,39 @@
       <updated>1605793293425</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1878" height="290" key="GridCell.Tab.0.bottom" timestamp="1605798513690">
+      <screen x="-120" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="290" key="GridCell.Tab.0.bottom/0.23.1280.709/-120.-1057.1920.1057@-120.-1057.1920.1057" timestamp="1605798513690" />
+    <state width="1878" height="290" key="GridCell.Tab.0.center" timestamp="1605798513689">
+      <screen x="-120" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="290" key="GridCell.Tab.0.center/0.23.1280.709/-120.-1057.1920.1057@-120.-1057.1920.1057" timestamp="1605798513689" />
+    <state width="1878" height="290" key="GridCell.Tab.0.left" timestamp="1605798513689">
+      <screen x="-120" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="290" key="GridCell.Tab.0.left/0.23.1280.709/-120.-1057.1920.1057@-120.-1057.1920.1057" timestamp="1605798513689" />
+    <state width="1878" height="290" key="GridCell.Tab.0.right" timestamp="1605798513689">
+      <screen x="-120" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="290" key="GridCell.Tab.0.right/0.23.1280.709/-120.-1057.1920.1057@-120.-1057.1920.1057" timestamp="1605798513689" />
+    <state width="1878" height="357" key="GridCell.Tab.1.bottom" timestamp="1605797906729">
+      <screen x="-120" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="357" key="GridCell.Tab.1.bottom/0.23.1280.709/-120.-1057.1920.1057@-120.-1057.1920.1057" timestamp="1605797906729" />
+    <state width="1878" height="357" key="GridCell.Tab.1.center" timestamp="1605797906728">
+      <screen x="-120" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="357" key="GridCell.Tab.1.center/0.23.1280.709/-120.-1057.1920.1057@-120.-1057.1920.1057" timestamp="1605797906728" />
+    <state width="1878" height="357" key="GridCell.Tab.1.left" timestamp="1605797906728">
+      <screen x="-120" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="357" key="GridCell.Tab.1.left/0.23.1280.709/-120.-1057.1920.1057@-120.-1057.1920.1057" timestamp="1605797906728" />
+    <state width="1878" height="357" key="GridCell.Tab.1.right" timestamp="1605797906728">
+      <screen x="-120" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="357" key="GridCell.Tab.1.right/0.23.1280.709/-120.-1057.1920.1057@-120.-1057.1920.1057" timestamp="1605797906728" />
   </component>
 </project>
