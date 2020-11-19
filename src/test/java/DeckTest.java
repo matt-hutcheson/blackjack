@@ -44,4 +44,39 @@ public class DeckTest {
         this.playingDeck.deal();
         assertEquals(51, this.playingDeck.countDeck());
     }
+
+    @Test
+    public void checkHighHand__player1() {
+        //check highHand
+        Card card1 = new Card(SuitType.HEARTS, RankType.TEN);
+        Card card2 = new Card(SuitType.CLUBS, RankType.NINE);
+        Player player1 = new Player("Lucky Bob");
+        Player player2 = new Player("Unlucky Bob");
+        player1.addCard(card1);
+        player2.addCard(card2);
+        assertEquals("Lucky Bob Wins with 10 which beats 9", playingDeck.getHighHand(player1, player2));
+    }
+    @Test
+    public void checkHighHand__player2() {
+        //check highHand
+        Card card1 = new Card(SuitType.HEARTS, RankType.TWO);
+        Card card2 = new Card(SuitType.CLUBS, RankType.NINE);
+        Player player1 = new Player("Lucky Bob");
+        Player player2 = new Player("Unlucky Bob");
+        player1.addCard(card1);
+        player2.addCard(card2);
+        assertEquals("Unlucky Bob Wins with 9 which beats 2", playingDeck.getHighHand(player1, player2));
+    }
+    @Test
+    public void checkHighHand__draw() {
+        //check highHand
+        Card card1 = new Card(SuitType.HEARTS, RankType.TEN);
+        Card card2 = new Card(SuitType.CLUBS, RankType.TEN);
+        Player player1 = new Player("Lucky Bob");
+        Player player2 = new Player("Unlucky Bob");
+        player1.addCard(card1);
+        player2.addCard(card2);
+        assertEquals("Draw", playingDeck.getHighHand(player1, player2));
+    }
+    
 }
