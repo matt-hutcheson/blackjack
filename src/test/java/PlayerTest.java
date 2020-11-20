@@ -42,4 +42,13 @@ public class PlayerTest {
         player1.addCard(card);
         assertEquals(card, player1.getCard(0));
     }
+    @Test
+    public void canGetTotalHandScore__NoAces(){
+        player1.addCard(card);
+        player1.addCard(card2);
+        player1.calcHandScores();
+        ArrayList<Integer> results = player1.getResults();
+        Integer result = 18;
+        assertEquals(result, results.get(0));
+    }
 }
