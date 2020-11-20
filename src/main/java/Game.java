@@ -1,16 +1,20 @@
+import java.util.ArrayList;
+
 public class Game {
-
-    public Game(){
-
+    private ArrayList<Player> players;
+    private Deck deck;
+    public Game(Deck deck){
+        this.deck = deck;
+        players = new ArrayList<>();
+    }
+    public void addPlayer(Player player){
+        this.players.add(player);
+    }
+    public ArrayList<Player> getPlayers(){
+        return players;
+    }
+    public void dealCard(Player player){
+        player.addCard(deck.deal());
     }
 
-    public String getHighHand(Player player1, Player player2){
-        if (player1.getCard().getValue() == player2.getCard().getValue()){
-            return "Draw";
-        } else if (player1.getCard().getValue() > player2.getCard().getValue()) {
-            return player1.getName() + " Wins with " + player1.getCard().getValue() + " which beats " + player2.getCard().getValue();
-        } else {
-            return player2.getName() + " Wins with " + player2.getCard().getValue() + " which beats " + player1.getCard().getValue();
-        }
-    }
 }

@@ -1,22 +1,31 @@
+import java.util.ArrayList;
+
 public class Player {
     private String name;
-    private Card hand;
+    private ArrayList<Card> hand;
 
     public Player(String name){
         this.name = name;
+        this.hand = new ArrayList<Card>();
     }
 
     public String getName() {
         return this.name;
     }
-    public Card getCard(){
+
+    public ArrayList<Card> getHand(){
         return this.hand;
     }
+
     public void addCard(Card card){
-        this.hand = card;
+        this.hand.add(card);
+    }
+
+    public Card getCard(int index){
+        return this.hand.get(index);
     }
 
     public void clearHand() {
-        this.hand = null;
+        this.hand.clear();
     }
 }
