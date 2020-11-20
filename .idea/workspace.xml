@@ -71,7 +71,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="JUnit.All in cc_java_blackjack">
+  <component name="RunManager" selected="JUnit.PlayerTest.canGetTotalHandScores_3Aces">
     <configuration name="All in cc_java_blackjack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cc_java_blackjack" />
       <option name="PACKAGE_NAME" value="" />
@@ -90,15 +90,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cc_java_blackjack" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PlayerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="PlayerTest.canGetTotalHandScore__NoAces" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cc_java_blackjack" />
       <option name="PACKAGE_NAME" value="" />
@@ -109,11 +100,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlayerTest.canRemoveCardFromHand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CardsLab" />
+    <configuration name="PlayerTest.canGetTotalHandScores_1Ace" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cc_java_blackjack" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PlayerTest" />
-      <option name="METHOD_NAME" value="canRemoveCardFromHand" />
+      <option name="METHOD_NAME" value="canGetTotalHandScores_1Ace" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerTest.canGetTotalHandScores_3Aces" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cc_java_blackjack" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlayerTest" />
+      <option name="METHOD_NAME" value="canGetTotalHandScores_3Aces" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -121,11 +122,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in cc_java_blackjack" />
+        <item itemvalue="JUnit.PlayerTest.canGetTotalHandScores_3Aces" />
+        <item itemvalue="JUnit.PlayerTest.canGetTotalHandScores_1Ace" />
         <item itemvalue="JUnit.PlayerTest.canGetTotalHandScore__NoAces" />
+        <item itemvalue="JUnit.All in cc_java_blackjack" />
         <item itemvalue="JUnit.GameTest.canDealCardToPlayer" />
-        <item itemvalue="JUnit.PlayerTest" />
-        <item itemvalue="JUnit.PlayerTest.canRemoveCardFromHand" />
       </list>
     </recent_temporary>
   </component>
@@ -160,58 +161,81 @@
       <screen x="-934" y="-1440" width="3440" height="1440" />
     </state>
     <state x="520" y="-892" key="#Notifications/0.0.1440.900/-934.-1440.3440.1440@-934.-1440.3440.1440" timestamp="1605871037340" />
-    <state width="1398" height="304" key="GridCell.Tab.0.bottom" timestamp="1605880952298">
+    <state x="100" y="100" width="1240" height="700" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1605891705846">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="100" y="100" width="1240" height="700" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1440.900@0.0.1440.900" timestamp="1605891705846" />
+    <state width="1398" height="304" key="GridCell.Tab.0.bottom" timestamp="1605895791465">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="3398" height="424" key="GridCell.Tab.0.bottom/0.0.1440.900/-934.-1440.3440.1440@-934.-1440.3440.1440" timestamp="1605874467558" />
-    <state width="1398" height="304" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1605880952298" />
+    <state width="1398" height="304" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1605895791465" />
     <state width="1878" height="290" key="GridCell.Tab.0.bottom/0.23.1280.709/-120.-1057.1920.1057@-120.-1057.1920.1057" timestamp="1605802952531" />
     <state width="3398" height="424" key="GridCell.Tab.0.bottom/0.25.1440.875/-934.-1440.3440.1440@-934.-1440.3440.1440" timestamp="1605872856849" />
-    <state width="1398" height="304" key="GridCell.Tab.0.center" timestamp="1605880952297">
+    <state width="1398" height="304" key="GridCell.Tab.0.center" timestamp="1605895791464">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="3398" height="424" key="GridCell.Tab.0.center/0.0.1440.900/-934.-1440.3440.1440@-934.-1440.3440.1440" timestamp="1605874467556" />
-    <state width="1398" height="304" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1605880952297" />
+    <state width="1398" height="304" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1605895791464" />
     <state width="1878" height="290" key="GridCell.Tab.0.center/0.23.1280.709/-120.-1057.1920.1057@-120.-1057.1920.1057" timestamp="1605802952530" />
     <state width="3398" height="424" key="GridCell.Tab.0.center/0.25.1440.875/-934.-1440.3440.1440@-934.-1440.3440.1440" timestamp="1605872856847" />
-    <state width="1398" height="304" key="GridCell.Tab.0.left" timestamp="1605880952295">
+    <state width="1398" height="304" key="GridCell.Tab.0.left" timestamp="1605895791463">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="3398" height="424" key="GridCell.Tab.0.left/0.0.1440.900/-934.-1440.3440.1440@-934.-1440.3440.1440" timestamp="1605874467553" />
-    <state width="1398" height="304" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1605880952295" />
+    <state width="1398" height="304" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1605895791463" />
     <state width="1878" height="290" key="GridCell.Tab.0.left/0.23.1280.709/-120.-1057.1920.1057@-120.-1057.1920.1057" timestamp="1605802952529" />
     <state width="3398" height="424" key="GridCell.Tab.0.left/0.25.1440.875/-934.-1440.3440.1440@-934.-1440.3440.1440" timestamp="1605872856845" />
-    <state width="1398" height="304" key="GridCell.Tab.0.right" timestamp="1605880952297">
+    <state width="1398" height="304" key="GridCell.Tab.0.right" timestamp="1605895791465">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="3398" height="424" key="GridCell.Tab.0.right/0.0.1440.900/-934.-1440.3440.1440@-934.-1440.3440.1440" timestamp="1605874467557" />
-    <state width="1398" height="304" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1605880952297" />
+    <state width="1398" height="304" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1605895791465" />
     <state width="1878" height="290" key="GridCell.Tab.0.right/0.23.1280.709/-120.-1057.1920.1057@-120.-1057.1920.1057" timestamp="1605802952531" />
     <state width="3398" height="424" key="GridCell.Tab.0.right/0.25.1440.875/-934.-1440.3440.1440@-934.-1440.3440.1440" timestamp="1605872856848" />
-    <state width="1398" height="304" key="GridCell.Tab.1.bottom" timestamp="1605880952499">
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom" timestamp="1605895791710">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1605880952499" />
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1605895791710" />
     <state width="1878" height="357" key="GridCell.Tab.1.bottom/0.23.1280.709/-120.-1057.1920.1057@-120.-1057.1920.1057" timestamp="1605800703171" />
-    <state width="1398" height="304" key="GridCell.Tab.1.center" timestamp="1605880952498">
+    <state width="1398" height="304" key="GridCell.Tab.1.center" timestamp="1605895791709">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1605880952498" />
+    <state width="1398" height="304" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1605895791709" />
     <state width="1878" height="357" key="GridCell.Tab.1.center/0.23.1280.709/-120.-1057.1920.1057@-120.-1057.1920.1057" timestamp="1605800703170" />
-    <state width="1398" height="304" key="GridCell.Tab.1.left" timestamp="1605880952497">
+    <state width="1398" height="304" key="GridCell.Tab.1.left" timestamp="1605895791709">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1605880952497" />
+    <state width="1398" height="304" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1605895791709" />
     <state width="1878" height="357" key="GridCell.Tab.1.left/0.23.1280.709/-120.-1057.1920.1057@-120.-1057.1920.1057" timestamp="1605800703169" />
-    <state width="1398" height="304" key="GridCell.Tab.1.right" timestamp="1605880952498">
+    <state width="1398" height="304" key="GridCell.Tab.1.right" timestamp="1605895791710">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1605880952498" />
+    <state width="1398" height="304" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1605895791710" />
     <state width="1878" height="357" key="GridCell.Tab.1.right/0.23.1280.709/-120.-1057.1920.1057@-120.-1057.1920.1057" timestamp="1605800703170" />
     <state x="295" y="-1084" key="SettingsEditor" timestamp="1605871264023">
       <screen x="-934" y="-1440" width="3440" height="1440" />
     </state>
     <state x="295" y="-1084" key="SettingsEditor/0.0.1440.900/-934.-1440.3440.1440@-934.-1440.3440.1440" timestamp="1605871129921" />
     <state x="295" y="-1084" key="SettingsEditor/0.25.1440.875/-934.-1440.3440.1440@-934.-1440.3440.1440" timestamp="1605871264023" />
+    <state x="224" y="107" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1605891515686">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="224" y="107" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1440.900@0.0.1440.900" timestamp="1605891515686" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.ConcurrentModificationException" package="java.util" />
+          <option name="timeStamp" value="5" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Player.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Player {
     private String name;
@@ -34,16 +35,18 @@ public class Player {
     public void calcHandScores() {
         Integer result = 0;
         results.add(result);
+        ArrayList<Integer> loopResults = new ArrayList<>(results);
         for (Card card : hand) {
-            for (Integer aceResult: results){
-                if (card.getRank() != RankType.ACE) {
-                    results.set(results.indexOf(aceResult), aceResult + card.getValue());
-                } else {
-                    for (Integer newAceResult: results) {
-                        results.set(results.indexOf(newAceResult), newAceResult + card.getValue());
-                        Integer newResult = aceResult + 10;
-                        results.add(newResult);
+            for (int i=0; i < loopResults.size(); i++){
+                results.set(i, results.get(i) + card.getValue());
+                if (card.getRank() == RankType.ACE) {
+                    if (results.size() > 1) {
+                        for (int j = results.size()-1; j > 0; j--) {
+                            results.set(j, results.get(j) + card.getValue());
+                        }
                     }
+                    int newResult = results.get(results.size()-1) + 10;
+                    results.add(newResult);
                 }
             }
         }
