@@ -162,4 +162,29 @@ public class GameTest {
         boolean actual = turnEnded.contains(true);
         assertTrue(actual);
     }
+    @Test
+    public void canResetResults(){
+        game.addDealer();
+        game.addPlayer(player1);
+        player1.addCard(cardTen);
+        player1.addCard(cardEight);
+        game.getDealer().addCard(cardAce);
+        game.getDealer().addCard(cardTen);
+        player1.calcHandScores();
+        game.getDealer().calcHandScores();
+        player1.setStuck(true);
+        game.getDealer().setStuck(true);
+        game.calcResults();
+        game.nextTurnReset();
+        assertEquals(0, game.getResults().size());
+        assertEquals(52, deck.countDeck());
+        assertEquals(0, game.getDealer().getHand().size());
+        assertEquals(0, game.getDealer().getResults().size());
+        assertFalse(game.getDealer().getStuck());
+        assertFalse(game.getDealer().getBust());
+        assertEquals(0, player1.getResults().size());
+        assertEquals(0, player1.getHand().size());
+        assertFalse(player1.getBust());
+        assertFalse(player1.getStuck());
+    }
 }

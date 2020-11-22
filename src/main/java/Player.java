@@ -66,6 +66,10 @@ public class Player {
         return this.bust;
     }
 
+    public void setBust(boolean newBust){
+        this.bust = newBust;
+    }
+
     public void checkIfBust(){
         ArrayList<Boolean> busts = new ArrayList<>();
         for (Integer result : results) {

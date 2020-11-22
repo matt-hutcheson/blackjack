@@ -98,4 +98,15 @@ public class Game {
             }
         } while (!this.dealer.getStuck() && !this.dealer.getBust());
     }
+
+    public void nextTurnReset(){
+        this.results.clear();
+        for (Player player: players){
+            player.getResults().clear();
+            player.setStuck(false);
+            player.setBust(false);
+            player.clearHand();
+            player.getResults().clear();
+        }
+    }
 }
