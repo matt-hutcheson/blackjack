@@ -2,6 +2,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class GameTest {
     Game game;
@@ -28,6 +29,11 @@ public class GameTest {
         game.dealCard(player1);
         assertEquals(51, deck.countDeck());
         assertEquals(1, player1.getHand().size());
+    }
+    @Test
+    public void canAddDealer(){
+        game.addDealer();
+        assertTrue(game.getPlayers().get(0).getDealer());
     }
 
 }

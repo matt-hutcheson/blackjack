@@ -10,6 +10,11 @@ public class Game {
     public void addPlayer(Player player){
         this.players.add(player);
     }
+    public void addDealer(){
+        Player dealer = new Player("Dealer");
+        dealer.setDealer();
+        this.players.add(dealer);
+    }
     public ArrayList<Player> getPlayers(){
         return players;
     }
