@@ -89,7 +89,7 @@ public class Game {
             }
             this.dealer.calcHandScores();
             this.dealer.checkIfBust();
-            if (this.dealer.getBestScore() > bestScore && !this.dealer.getBust()) {
+            if (this.dealer.getBestScore() >= bestScore && !this.dealer.getBust()) {
                 this.dealer.setStuck(true);
             }
         } while (!this.dealer.getStuck() && !this.dealer.getBust());
