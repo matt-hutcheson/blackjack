@@ -1,3 +1,4 @@
+import org.hamcrest.CoreMatchers;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -137,5 +138,28 @@ public class GameTest {
         results = game.getResults();
         assertEquals(player1, results.get("Draws").get(0));
         assertEquals(player2, results.get("Losers").get(0));
+    }
+    @Test
+    public void checkDealerAI(){
+        game.addDealer();
+        game.addPlayer(player1);
+        game.addPlayer(player2);
+        player1.addCard(cardTen);
+        player1.addCard(cardSix);
+        player2.addCard(cardEight);
+        player2.addCard(cardTen);
+        game.getDealer().addCard(cardSix);
+        game.getDealer().addCard(cardEight);
+        player1.setStuck(true);
+        player2.setStuck(true);
+        player1.calcHandScores();
+        player2.calcHandScores();
+        Boolean expected = true;
+        game.dealerHaveTurn();
+        ArrayList<Boolean> turnEnded = new ArrayList<>();
+        turnEnded.add(game.getDealer().getBust());
+        turnEnded.add(game.getDealer().getStuck());
+        boolean actual = turnEnded.contains(true);
+        assertTrue(actual);
     }
 }
