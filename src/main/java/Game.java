@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Game {
     private ArrayList<Player> players;
@@ -21,6 +22,16 @@ public class Game {
     public void dealCard(Player player){
         player.addCard(deck.deal());
     }
-
+    public boolean checkRoundFinished(){
+        ArrayList<Boolean> endedTurn = new ArrayList<>();
+        for (Player player : players){
+            if (player.getBust() || player.getStuck()){
+                endedTurn.add(true);
+            } else {
+                endedTurn.add(false);
+            }
+        }
+        return !endedTurn.contains(false);
+    }
 
 }

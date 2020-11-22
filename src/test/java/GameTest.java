@@ -1,8 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class GameTest {
     Game game;
@@ -38,7 +37,7 @@ public class GameTest {
         assertTrue(game.getPlayers().get(0).getDealer());
     }
     @Test
-    public void canCheckIfAllStuckOrBust(){
+    public void canCheckIfAllStuckOrBust__True(){
         game.addDealer();
         game.addPlayer(player1);
         game.addPlayer(player2);
@@ -49,7 +48,20 @@ public class GameTest {
         player2.addCard(cardTen);
         player2.calcHandScores();
         player2.checkIfBust();
-        assertEquals(true, game.checkRoundFinished());
+        assertTrue(game.checkRoundFinished());
+    }
+    @Test
+    public void canCheckIfAllStuckOrBust__False(){
+        game.addDealer();
+        game.addPlayer(player1);
+        game.addPlayer(player2);
+        game.getPlayers().get(0).setStuck(true);
+        player2.addCard(cardTen);
+        player2.addCard(cardTen);
+        player2.addCard(cardTen);
+        player2.calcHandScores();
+        player2.checkIfBust();
+        assertFalse(game.checkRoundFinished());
     }
 
 }

@@ -13,6 +13,8 @@ public class Player {
         this.hand = new ArrayList<>();
         this.results = new ArrayList<>();
         this.dealer = false;
+        this.bust = false;
+        this.stuck = false;
     }
 
     public String getName() {
