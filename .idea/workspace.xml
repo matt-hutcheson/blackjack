@@ -23,11 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="286dafa2-7c5f-476e-920b-46beee0724e8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlayerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PlayerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/PlayerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +68,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="JUnit.PlayerTest.canCheckIfPlayerIsBust_TrueAces">
+  <component name="RunManager" selected="JUnit.PlayerTest">
     <configuration name="PlayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cc_java_blackjack" />
       <option name="PACKAGE_NAME" value="" />
@@ -86,16 +83,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PlayerTest" />
       <option name="METHOD_NAME" value="canCheckIfPlayerIsBust_FalseAces" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlayerTest.canCheckIfPlayerIsBust_FalseNoAces" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cc_java_blackjack" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PlayerTest" />
-      <option name="METHOD_NAME" value="canCheckIfPlayerIsBust_FalseNoAces" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -121,13 +108,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PlayerTest.canGetDealer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cc_java_blackjack" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlayerTest" />
+      <option name="METHOD_NAME" value="canGetDealer" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PlayerTest.canCheckIfPlayerIsBust_TrueAces" />
         <item itemvalue="JUnit.PlayerTest" />
+        <item itemvalue="JUnit.PlayerTest.canGetDealer" />
+        <item itemvalue="JUnit.PlayerTest.canCheckIfPlayerIsBust_TrueAces" />
         <item itemvalue="JUnit.PlayerTest.canCheckIfPlayerIsBust_FalseAces" />
         <item itemvalue="JUnit.PlayerTest.canCheckIfPlayerIsBust_TrueNoAces" />
-        <item itemvalue="JUnit.PlayerTest.canCheckIfPlayerIsBust_FalseNoAces" />
       </list>
     </recent_temporary>
   </component>
@@ -166,53 +163,53 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="100" y="100" width="1240" height="700" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1440.900@0.0.1440.900" timestamp="1605891705846" />
-    <state width="1398" height="304" key="GridCell.Tab.0.bottom" timestamp="1606038282004">
+    <state width="1398" height="304" key="GridCell.Tab.0.bottom" timestamp="1606038786840">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="3398" height="424" key="GridCell.Tab.0.bottom/0.0.1440.900/-934.-1440.3440.1440@-934.-1440.3440.1440" timestamp="1605874467558" />
-    <state width="1398" height="304" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606038282004" />
+    <state width="1398" height="304" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606038786840" />
     <state width="1878" height="290" key="GridCell.Tab.0.bottom/0.23.1280.709/-120.-1057.1920.1057@-120.-1057.1920.1057" timestamp="1605802952531" />
     <state width="3398" height="424" key="GridCell.Tab.0.bottom/0.25.1440.875/-934.-1440.3440.1440@-934.-1440.3440.1440" timestamp="1605872856849" />
-    <state width="1398" height="304" key="GridCell.Tab.0.center" timestamp="1606038282000">
+    <state width="1398" height="304" key="GridCell.Tab.0.center" timestamp="1606038786838">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="3398" height="424" key="GridCell.Tab.0.center/0.0.1440.900/-934.-1440.3440.1440@-934.-1440.3440.1440" timestamp="1605874467556" />
-    <state width="1398" height="304" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1606038282000" />
+    <state width="1398" height="304" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1606038786838" />
     <state width="1878" height="290" key="GridCell.Tab.0.center/0.23.1280.709/-120.-1057.1920.1057@-120.-1057.1920.1057" timestamp="1605802952530" />
     <state width="3398" height="424" key="GridCell.Tab.0.center/0.25.1440.875/-934.-1440.3440.1440@-934.-1440.3440.1440" timestamp="1605872856847" />
-    <state width="1398" height="304" key="GridCell.Tab.0.left" timestamp="1606038281999">
+    <state width="1398" height="304" key="GridCell.Tab.0.left" timestamp="1606038786837">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="3398" height="424" key="GridCell.Tab.0.left/0.0.1440.900/-934.-1440.3440.1440@-934.-1440.3440.1440" timestamp="1605874467553" />
-    <state width="1398" height="304" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1606038281999" />
+    <state width="1398" height="304" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1606038786837" />
     <state width="1878" height="290" key="GridCell.Tab.0.left/0.23.1280.709/-120.-1057.1920.1057@-120.-1057.1920.1057" timestamp="1605802952529" />
     <state width="3398" height="424" key="GridCell.Tab.0.left/0.25.1440.875/-934.-1440.3440.1440@-934.-1440.3440.1440" timestamp="1605872856845" />
-    <state width="1398" height="304" key="GridCell.Tab.0.right" timestamp="1606038282000">
+    <state width="1398" height="304" key="GridCell.Tab.0.right" timestamp="1606038786839">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="3398" height="424" key="GridCell.Tab.0.right/0.0.1440.900/-934.-1440.3440.1440@-934.-1440.3440.1440" timestamp="1605874467557" />
-    <state width="1398" height="304" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1606038282000" />
+    <state width="1398" height="304" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1606038786839" />
     <state width="1878" height="290" key="GridCell.Tab.0.right/0.23.1280.709/-120.-1057.1920.1057@-120.-1057.1920.1057" timestamp="1605802952531" />
     <state width="3398" height="424" key="GridCell.Tab.0.right/0.25.1440.875/-934.-1440.3440.1440@-934.-1440.3440.1440" timestamp="1605872856848" />
-    <state width="1398" height="304" key="GridCell.Tab.1.bottom" timestamp="1606038294255">
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom" timestamp="1606038786843">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606038294255" />
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606038786843" />
     <state width="1878" height="357" key="GridCell.Tab.1.bottom/0.23.1280.709/-120.-1057.1920.1057@-120.-1057.1920.1057" timestamp="1605800703171" />
-    <state width="1398" height="304" key="GridCell.Tab.1.center" timestamp="1606038294254">
+    <state width="1398" height="304" key="GridCell.Tab.1.center" timestamp="1606038786842">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1606038294254" />
+    <state width="1398" height="304" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1606038786842" />
     <state width="1878" height="357" key="GridCell.Tab.1.center/0.23.1280.709/-120.-1057.1920.1057@-120.-1057.1920.1057" timestamp="1605800703170" />
-    <state width="1398" height="304" key="GridCell.Tab.1.left" timestamp="1606038294254">
+    <state width="1398" height="304" key="GridCell.Tab.1.left" timestamp="1606038786841">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1606038294254" />
+    <state width="1398" height="304" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1606038786841" />
     <state width="1878" height="357" key="GridCell.Tab.1.left/0.23.1280.709/-120.-1057.1920.1057@-120.-1057.1920.1057" timestamp="1605800703169" />
-    <state width="1398" height="304" key="GridCell.Tab.1.right" timestamp="1606038294255">
+    <state width="1398" height="304" key="GridCell.Tab.1.right" timestamp="1606038786842">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1606038294255" />
+    <state width="1398" height="304" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1606038786842" />
     <state width="1878" height="357" key="GridCell.Tab.1.right/0.23.1280.709/-120.-1057.1920.1057@-120.-1057.1920.1057" timestamp="1605800703170" />
     <state x="295" y="-1084" key="SettingsEditor" timestamp="1605871264023">
       <screen x="-934" y="-1440" width="3440" height="1440" />
@@ -231,11 +228,6 @@
           <properties class="java.util.ConcurrentModificationException" package="java.util" />
           <option name="timeStamp" value="5" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Player.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

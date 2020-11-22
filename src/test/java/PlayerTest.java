@@ -3,8 +3,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.*;
 
 public class PlayerTest {
     Player player1;
@@ -115,5 +114,15 @@ public class PlayerTest {
         player1.calcHandScores();
         player1.checkIfBust();
         assertEquals(true, player1.getBust());
+    }
+    @Test
+    public void canGetDealer(){
+        Player dealer = new Player("Dealer");
+        dealer.setDealer();
+        assertTrue(dealer.getDealer());
+    }
+    @Test
+    public void playerNotDealer(){
+        assertFalse(player1.getDealer());
     }
 }

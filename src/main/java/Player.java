@@ -5,11 +5,13 @@ public class Player {
     private ArrayList<Card> hand;
     private ArrayList<Integer> results;
     private Boolean bust;
+    private boolean dealer;
 
     public Player(String name){
         this.name = name;
         this.hand = new ArrayList<>();
         this.results = new ArrayList<>();
+        this.dealer = false;
     }
 
     public String getName() {
@@ -76,5 +78,13 @@ public class Player {
         } else {
             this.bust = false;
         }
+    }
+
+    public void setDealer(){
+        this.dealer = true;
+    }
+
+    public boolean getDealer(){
+        return this.dealer;
     }
 }
