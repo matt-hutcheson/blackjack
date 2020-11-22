@@ -31,7 +31,14 @@ public class Game {
     }
 
     public void dealCard(Player player){
-        player.addCard(deck.deal());
+        if (this.deck.countDeck() > 0) {
+            player.addCard(deck.deal());
+        } else {
+            this.deck.populate();
+            this.deck.shuffle();
+            System.out.println("Previous deck empty. New deck shuffled and put on deck.");
+            player.addCard(deck.deal());
+        }
     }
 
     public boolean checkRoundFinished(){

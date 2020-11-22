@@ -52,9 +52,9 @@ public class Runner {
                         if (!player.getBust()) {
                             System.out.println("Stick/twist?: ");
                             String choice = scanner.next().toLowerCase();
-                            if (choice.matches("twist")) {
+                            if (choice.matches("twist") || choice.matches("t")) {
                                 game.dealCard(player);
-                            } else if (choice.matches("stick")) {
+                            } else if (choice.matches("stick") || choice.matches("s")) {
                                 player.setStuck(true);
                             }
                         }
@@ -86,13 +86,15 @@ public class Runner {
                     for (Player player : game.getResults().get("Winners")) {
                         System.out.println(player.getName() + " wins! Beating the dealer with " + player.getBestScore());
                     }
-                } else if (game.getResults().get("Draws").size() > 0) {
+                }
+                if (game.getResults().get("Draws").size() > 0) {
                     for (Player player : game.getResults().get("Draws")) {
                         System.out.println(player.getName() + " draws with the dealer with " + player.getBestScore());
                     }
-                } else if (game.getResults().get("Losers").size() > 0) {
+                }
+                if (game.getResults().get("Losers").size() > 0) {
                     for (Player player : game.getResults().get("Losers")) {
-                        System.out.println(player.getName() + " loses to the dealer with " + player.getBestScore());
+                        System.out.println(player.getName() + " loses to the dealer with " + player.getResults().get(0));
                     }
                 }
                 game.nextTurnReset();
