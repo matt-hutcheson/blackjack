@@ -83,6 +83,6 @@ public class GameTest {
         player2.addCard(cardEight);
         player1.setStuck(true);
         player2.setStuck(true);
-
+        game.getResults();
     }
 }

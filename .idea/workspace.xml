@@ -25,9 +25,9 @@
     <list default="true" id="286dafa2-7c5f-476e-920b-46beee0724e8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GameTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/GameTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/GameTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlayerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +71,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="JUnit.GameTest">
+  <component name="RunManager" selected="JUnit.PlayerTest.canGetBestScore">
     <configuration name="GameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cc_java_blackjack" />
       <option name="PACKAGE_NAME" value="" />
@@ -111,22 +111,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlayerTest.canGetBestScore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cc_java_blackjack" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PlayerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="canGetBestScore" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PlayerTest.canGetBestScore" />
         <item itemvalue="JUnit.GameTest" />
         <item itemvalue="JUnit.GameTest.canCheckIfAllStuckOrBust__False" />
         <item itemvalue="JUnit.GameTest.canCheckIfAllStuckOrBust" />
         <item itemvalue="JUnit.GameTest.canAddDealer" />
-        <item itemvalue="JUnit.PlayerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -165,35 +166,35 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="100" y="100" width="1240" height="700" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1440.900@0.0.1440.900" timestamp="1605891705846" />
-    <state width="1398" height="424" key="GridCell.Tab.0.bottom" timestamp="1606043440376">
+    <state width="1398" height="424" key="GridCell.Tab.0.bottom" timestamp="1606043817493">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="3398" height="424" key="GridCell.Tab.0.bottom/0.0.1440.900/-934.-1440.3440.1440@-934.-1440.3440.1440" timestamp="1605874467558" />
-    <state width="1398" height="424" key="GridCell.Tab.0.bottom/0.0.1440.900/-934.-1440.3440.1440@0.0.1440.900" timestamp="1606043440376" />
+    <state width="1398" height="424" key="GridCell.Tab.0.bottom/0.0.1440.900/-934.-1440.3440.1440@0.0.1440.900" timestamp="1606043817493" />
     <state width="1398" height="304" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606041623952" />
     <state width="1878" height="290" key="GridCell.Tab.0.bottom/0.23.1280.709/-120.-1057.1920.1057@-120.-1057.1920.1057" timestamp="1605802952531" />
     <state width="3398" height="424" key="GridCell.Tab.0.bottom/0.25.1440.875/-934.-1440.3440.1440@-934.-1440.3440.1440" timestamp="1605872856849" />
-    <state width="1398" height="424" key="GridCell.Tab.0.center" timestamp="1606043440374">
+    <state width="1398" height="424" key="GridCell.Tab.0.center" timestamp="1606043817490">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="3398" height="424" key="GridCell.Tab.0.center/0.0.1440.900/-934.-1440.3440.1440@-934.-1440.3440.1440" timestamp="1605874467556" />
-    <state width="1398" height="424" key="GridCell.Tab.0.center/0.0.1440.900/-934.-1440.3440.1440@0.0.1440.900" timestamp="1606043440374" />
+    <state width="1398" height="424" key="GridCell.Tab.0.center/0.0.1440.900/-934.-1440.3440.1440@0.0.1440.900" timestamp="1606043817490" />
     <state width="1398" height="304" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1606041623951" />
     <state width="1878" height="290" key="GridCell.Tab.0.center/0.23.1280.709/-120.-1057.1920.1057@-120.-1057.1920.1057" timestamp="1605802952530" />
     <state width="3398" height="424" key="GridCell.Tab.0.center/0.25.1440.875/-934.-1440.3440.1440@-934.-1440.3440.1440" timestamp="1605872856847" />
-    <state width="1398" height="424" key="GridCell.Tab.0.left" timestamp="1606043440373">
+    <state width="1398" height="424" key="GridCell.Tab.0.left" timestamp="1606043817489">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="3398" height="424" key="GridCell.Tab.0.left/0.0.1440.900/-934.-1440.3440.1440@-934.-1440.3440.1440" timestamp="1605874467553" />
-    <state width="1398" height="424" key="GridCell.Tab.0.left/0.0.1440.900/-934.-1440.3440.1440@0.0.1440.900" timestamp="1606043440373" />
+    <state width="1398" height="424" key="GridCell.Tab.0.left/0.0.1440.900/-934.-1440.3440.1440@0.0.1440.900" timestamp="1606043817489" />
     <state width="1398" height="304" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1606041623950" />
     <state width="1878" height="290" key="GridCell.Tab.0.left/0.23.1280.709/-120.-1057.1920.1057@-120.-1057.1920.1057" timestamp="1605802952529" />
     <state width="3398" height="424" key="GridCell.Tab.0.left/0.25.1440.875/-934.-1440.3440.1440@-934.-1440.3440.1440" timestamp="1605872856845" />
-    <state width="1398" height="424" key="GridCell.Tab.0.right" timestamp="1606043440375">
+    <state width="1398" height="424" key="GridCell.Tab.0.right" timestamp="1606043817492">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="3398" height="424" key="GridCell.Tab.0.right/0.0.1440.900/-934.-1440.3440.1440@-934.-1440.3440.1440" timestamp="1605874467557" />
-    <state width="1398" height="424" key="GridCell.Tab.0.right/0.0.1440.900/-934.-1440.3440.1440@0.0.1440.900" timestamp="1606043440375" />
+    <state width="1398" height="424" key="GridCell.Tab.0.right/0.0.1440.900/-934.-1440.3440.1440@0.0.1440.900" timestamp="1606043817492" />
     <state width="1398" height="304" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1606041623951" />
     <state width="1878" height="290" key="GridCell.Tab.0.right/0.23.1280.709/-120.-1057.1920.1057@-120.-1057.1920.1057" timestamp="1605802952531" />
     <state width="3398" height="424" key="GridCell.Tab.0.right/0.25.1440.875/-934.-1440.3440.1440@-934.-1440.3440.1440" timestamp="1605872856848" />

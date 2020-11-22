@@ -98,4 +98,14 @@ public class Player {
     public boolean getStuck(){
         return this.stuck;
     }
+
+    public int getBestScore(){
+        int bestScore = 0;
+        for (int result: results){
+            if (result > bestScore && result < 22){
+                bestScore = result;
+            }
+        }
+        return bestScore;
+    }
 }

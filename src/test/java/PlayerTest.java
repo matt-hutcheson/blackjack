@@ -7,14 +7,14 @@ import static org.junit.Assert.*;
 
 public class PlayerTest {
     Player player1;
-    Card card;
-    Card card2;
+    Card cardTen;
+    Card cardEight;
     Card cardAce;
     @Before
     public void before(){
         player1 = new Player("Lucky Bob");
-        card = new Card(SuitType.HEARTS, RankType.TEN);
-        card2 = new Card(SuitType.SPADES, RankType.EIGHT);
+        cardTen = new Card(SuitType.HEARTS, RankType.TEN);
+        cardEight = new Card(SuitType.SPADES, RankType.EIGHT);
         cardAce = new Card(SuitType.DIAMONDS, RankType.ACE);
     }
     @Test
@@ -23,30 +23,30 @@ public class PlayerTest {
     }
     @Test
     public void canAddCardToHand() {
-        player1.addCard(this.card);
+        player1.addCard(this.cardTen);
         assertEquals(1, player1.getHand().size());
     }
     @Test
     public void canRemoveCardFromHand(){
-        player1.addCard(this.card);
+        player1.addCard(this.cardTen);
         player1.clearHand();
         assertEquals(0, player1.getHand().size());
     }
     @Test
     public void canGetHandMultipleCards(){
-        player1.addCard(card);
-        player1.addCard(card2);
+        player1.addCard(cardTen);
+        player1.addCard(cardEight);
         assertEquals(2, player1.getHand().size());
     }
     @Test
     public void canGetCard(){
-        player1.addCard(card);
-        assertEquals(card, player1.getCard(0));
+        player1.addCard(cardTen);
+        assertEquals(cardTen, player1.getCard(0));
     }
     @Test
     public void canGetTotalHandScore__NoAces(){
-        player1.addCard(card);
-        player1.addCard(card2);
+        player1.addCard(cardTen);
+        player1.addCard(cardEight);
         player1.calcHandScores();
         ArrayList<Integer> results = player1.getResults();
         Integer result = 18;
@@ -54,7 +54,7 @@ public class PlayerTest {
     }
     @Test
     public void canGetTotalHandScores_1Ace(){
-        player1.addCard(card);
+        player1.addCard(cardTen);
         player1.addCard(cardAce);
         player1.calcHandScores();
         ArrayList<Integer> results = player1.getResults();
@@ -81,24 +81,24 @@ public class PlayerTest {
     }
     @Test
     public void canCheckIfPlayerIsBust_FalseNoAces(){
-        player1.addCard(card);
-        player1.addCard(card2);
+        player1.addCard(cardTen);
+        player1.addCard(cardEight);
         player1.calcHandScores();
         player1.checkIfBust();
         assertEquals(false, player1.getBust());
     }
     @Test
     public void canCheckIfPlayerIsBust_TrueNoAces(){
-        player1.addCard(card);
-        player1.addCard(card2);
-        player1.addCard(card);
+        player1.addCard(cardTen);
+        player1.addCard(cardEight);
+        player1.addCard(cardTen);
         player1.calcHandScores();
         player1.checkIfBust();
         assertEquals(true, player1.getBust());
     }
     @Test
     public void canCheckIfPlayerIsBust_FalseAces(){
-        player1.addCard(card);
+        player1.addCard(cardTen);
         player1.addCard(cardAce);
         player1.addCard(cardAce);
         player1.calcHandScores();
@@ -107,10 +107,10 @@ public class PlayerTest {
     }
     @Test
     public void canCheckIfPlayerIsBust_TrueAces(){
-        player1.addCard(card);
+        player1.addCard(cardTen);
         player1.addCard(cardAce);
         player1.addCard(cardAce);
-        player1.addCard(card);
+        player1.addCard(cardTen);
         player1.calcHandScores();
         player1.checkIfBust();
         assertEquals(true, player1.getBust());
@@ -129,5 +129,14 @@ public class PlayerTest {
     public void canGetStuck(){
         player1.setStuck(true);
         assertTrue(player1.getStuck());
+    }
+    @Test
+    public void canGetBestScore(){
+        player1.addCard(cardAce);
+        player1.addCard(cardAce);
+        player1.addCard(cardEight);
+        player1.addCard(cardTen);
+        player1.calcHandScores();
+        assertEquals(20, player1.getBestScore());
     }
 }
