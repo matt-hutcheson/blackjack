@@ -9,6 +9,9 @@ public class GameTest {
     Player player1;
     Player player2;
     Card cardTen;
+    Card cardAce;
+    Card cardEight;
+    Card cardSix;
     @Before
     public void before(){
         player1 = new Player("Lucky Bob");
@@ -18,6 +21,9 @@ public class GameTest {
         deck.shuffle();
         game = new Game(deck);
         cardTen = new Card(SuitType.CLUBS, RankType.TEN);
+        cardAce = new Card(SuitType.DIAMONDS, RankType.ACE);
+        cardEight = new Card(SuitType.HEARTS, RankType.EIGHT);
+        cardSix = new Card(SuitType.SPADES, RankType.SIX);
     }
     @Test
     public void canAddPlayerToGame(){
@@ -41,7 +47,7 @@ public class GameTest {
         game.addDealer();
         game.addPlayer(player1);
         game.addPlayer(player2);
-        game.getPlayers().get(0).setStuck(true);
+        game.getDealer().setStuck(true);
         player1.setStuck(true);
         player2.addCard(cardTen);
         player2.addCard(cardTen);
@@ -63,5 +69,20 @@ public class GameTest {
         player2.checkIfBust();
         assertFalse(game.checkRoundFinished());
     }
+    @Test
+    public void canCheckWinner__Player1(){
+        game.addDealer();
+        game.addPlayer(player1);
+        game.addPlayer(player2);
+        game.getDealer().addCard(cardEight);
+        game.getDealer().addCard(cardSix);
+        game.getDealer().addCard(cardTen);
+        player1.addCard(cardAce);
+        player1.addCard(cardTen);
+        player2.addCard(cardTen);
+        player2.addCard(cardEight);
+        player1.setStuck(true);
+        player2.setStuck(true);
 
+    }
 }

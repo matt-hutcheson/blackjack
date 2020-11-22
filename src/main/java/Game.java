@@ -1,9 +1,9 @@
 import java.util.ArrayList;
-import java.util.HashSet;
 
 public class Game {
     private ArrayList<Player> players;
     private Deck deck;
+    private Player dealer;
     public Game(Deck deck){
         this.deck = deck;
         players = new ArrayList<>();
@@ -12,12 +12,15 @@ public class Game {
         this.players.add(player);
     }
     public void addDealer(){
-        Player dealer = new Player("Dealer");
+        dealer = new Player("Dealer");
         dealer.setDealer();
         this.players.add(dealer);
     }
     public ArrayList<Player> getPlayers(){
         return players;
+    }
+    public Player getDealer(){
+        return dealer;
     }
     public void dealCard(Player player){
         player.addCard(deck.deal());
