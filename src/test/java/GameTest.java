@@ -1,6 +1,9 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import static org.junit.Assert.*;
 
 public class GameTest {
@@ -70,7 +73,8 @@ public class GameTest {
         assertFalse(game.checkRoundFinished());
     }
     @Test
-    public void canCheckWinner__Player1(){
+    public void canCheckWinner__Player1Player2(){
+        HashMap<String, ArrayList<Player>> results;
         game.addDealer();
         game.addPlayer(player1);
         game.addPlayer(player2);
@@ -83,6 +87,55 @@ public class GameTest {
         player2.addCard(cardEight);
         player1.setStuck(true);
         player2.setStuck(true);
-        game.getResults();
+        game.getDealer().calcHandScores();
+        player1.calcHandScores();
+        player2.calcHandScores();
+        results = game.getResults();
+        assertEquals(player1, results.get("Winners").get(0));
+        assertEquals(player2, results.get("Winners").get(1));
+    }
+    @Test
+    public void canCheckWinner__Dealer(){
+        HashMap<String, ArrayList<Player>> results;
+        game.addDealer();
+        game.addPlayer(player1);
+        game.addPlayer(player2);
+        game.getDealer().addCard(cardAce);
+        game.getDealer().addCard(cardTen);
+        game.getDealer().setStuck(true);
+        player1.addCard(cardTen);
+        player1.addCard(cardEight);
+        player2.addCard(cardTen);
+        player2.addCard(cardTen);
+        player1.setStuck(true);
+        player2.setStuck(true);
+        game.getDealer().calcHandScores();
+        player1.calcHandScores();
+        player2.calcHandScores();
+        results = game.getResults();
+        assertEquals(player1, results.get("Losers").get(0));
+        assertEquals(player2, results.get("Losers").get(1));
+    }
+    @Test
+    public void canCheckWinner__Draw(){
+        HashMap<String, ArrayList<Player>> results;
+        game.addDealer();
+        game.addPlayer(player1);
+        game.addPlayer(player2);
+        game.getDealer().addCard(cardAce);
+        game.getDealer().addCard(cardTen);
+        game.getDealer().setStuck(true);
+        player1.addCard(cardTen);
+        player1.addCard(cardAce);
+        player2.addCard(cardTen);
+        player2.addCard(cardTen);
+        player1.setStuck(true);
+        player2.setStuck(true);
+        game.getDealer().calcHandScores();
+        player1.calcHandScores();
+        player2.calcHandScores();
+        results = game.getResults();
+        assertEquals(player1, results.get("Draws").get(0));
+        assertEquals(player2, results.get("Losers").get(0));
     }
 }

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Game {
     private ArrayList<Player> players;
@@ -6,7 +7,7 @@ public class Game {
     private Player dealer;
     public Game(Deck deck){
         this.deck = deck;
-        players = new ArrayList<>();
+        this.players = new ArrayList<>();
     }
 
     public void addPlayer(Player player){
@@ -43,13 +44,35 @@ public class Game {
         return !endedTurn.contains(false);
     }
 
-    public void getResults(){
-        for (Player player: players){
-            player.calcHandScores();
-            player.checkIfBust();
-            if (player.getStuck() && !player.getBust()){
-                player.getBestScore();
+    public boolean checkDraw(Player player){
+        boolean draw = false;
+        if (this.dealer.getBestScore() == player.getBestScore()){
+            draw = true;
+        }
+        return draw;
+    }
+
+    public HashMap<String, ArrayList<Player>> getResults(){
+        HashMap<String, ArrayList<Player>> results = new HashMap<>();
+        ArrayList<Player> wins = new ArrayList<>();
+        ArrayList<Player> draws = new ArrayList<>();
+        ArrayList<Player> losses = new ArrayList<>();
+        for (int i = 1; i < players.size(); i++){
+            if (!players.get(i).getBust()){
+                if (players.get(i).getBestScore() > dealer.getBestScore()){
+                    wins.add(players.get(i));
+                } else if (checkDraw(players.get(i))){
+                    draws.add(players.get(i));
+                } else {
+                    losses.add(players.get(i));
+                }
+            } else {
+                losses.add(players.get(i));
             }
         }
+        results.put("Winners", wins);
+        results.put("Draws", draws);
+        results.put("Losers", losses);
+        return results;
     }
 }
