@@ -10,11 +10,13 @@ public class PlayerTest {
     Player player1;
     Card card;
     Card card2;
+    Card cardAce;
     @Before
     public void before(){
         player1 = new Player("Lucky Bob");
         card = new Card(SuitType.HEARTS, RankType.TEN);
         card2 = new Card(SuitType.SPADES, RankType.EIGHT);
+        cardAce = new Card(SuitType.DIAMONDS, RankType.ACE);
     }
     @Test
     public void HasName(){
@@ -53,7 +55,6 @@ public class PlayerTest {
     }
     @Test
     public void canGetTotalHandScores_1Ace(){
-        Card cardAce = new Card(SuitType.DIAMONDS, RankType.ACE);
         player1.addCard(card);
         player1.addCard(cardAce);
         player1.calcHandScores();
@@ -65,7 +66,6 @@ public class PlayerTest {
     }
     @Test
     public void canGetTotalHandScores_3Aces(){
-        Card cardAce = new Card(SuitType.DIAMONDS, RankType.ACE);
         player1.addCard(cardAce);
         player1.addCard(cardAce);
         player1.addCard(cardAce);
@@ -79,5 +79,41 @@ public class PlayerTest {
         assertEquals(result2, results.get(1));
         assertEquals(result3, results.get(2));
         assertEquals(result4, results.get(3));
+    }
+    @Test
+    public void canCheckIfPlayerIsBust_FalseNoAces(){
+        player1.addCard(card);
+        player1.addCard(card2);
+        player1.calcHandScores();
+        player1.checkIfBust();
+        assertEquals(false, player1.getBust());
+    }
+    @Test
+    public void canCheckIfPlayerIsBust_TrueNoAces(){
+        player1.addCard(card);
+        player1.addCard(card2);
+        player1.addCard(card);
+        player1.calcHandScores();
+        player1.checkIfBust();
+        assertEquals(true, player1.getBust());
+    }
+    @Test
+    public void canCheckIfPlayerIsBust_FalseAces(){
+        player1.addCard(card);
+        player1.addCard(cardAce);
+        player1.addCard(cardAce);
+        player1.calcHandScores();
+        player1.checkIfBust();
+        assertEquals(false, player1.getBust());
+    }
+    @Test
+    public void canCheckIfPlayerIsBust_TrueAces(){
+        player1.addCard(card);
+        player1.addCard(cardAce);
+        player1.addCard(cardAce);
+        player1.addCard(card);
+        player1.calcHandScores();
+        player1.checkIfBust();
+        assertEquals(true, player1.getBust());
     }
 }
