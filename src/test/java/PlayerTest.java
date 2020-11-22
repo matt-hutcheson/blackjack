@@ -125,4 +125,9 @@ public class PlayerTest {
     public void playerNotDealer(){
         assertFalse(player1.getDealer());
     }
+    @Test
+    public void canGetStuck(){
+        player1.setStuck(true);
+        assertTrue(player1.getStuck());
+    }
 }

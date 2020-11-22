@@ -5,6 +5,7 @@ public class Player {
     private ArrayList<Card> hand;
     private ArrayList<Integer> results;
     private Boolean bust;
+    private boolean stuck;
     private boolean dealer;
 
     public Player(String name){
@@ -86,5 +87,13 @@ public class Player {
 
     public boolean getDealer(){
         return this.dealer;
+    }
+
+    public void setStuck(boolean newStuck){
+        this.stuck = newStuck;
+    }
+
+    public boolean getStuck(){
+        return this.stuck;
     }
 }
