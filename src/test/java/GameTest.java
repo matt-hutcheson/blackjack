@@ -9,6 +9,7 @@ public class GameTest {
     Deck deck;
     Player player1;
     Player player2;
+    Card cardTen;
     @Before
     public void before(){
         player1 = new Player("Lucky Bob");
@@ -17,6 +18,7 @@ public class GameTest {
         deck.populate();
         deck.shuffle();
         game = new Game(deck);
+        cardTen = new Card(SuitType.CLUBS, RankType.TEN);
     }
     @Test
     public void canAddPlayerToGame(){
@@ -34,6 +36,20 @@ public class GameTest {
     public void canAddDealer(){
         game.addDealer();
         assertTrue(game.getPlayers().get(0).getDealer());
+    }
+    @Test
+    public void canCheckIfAllStuckOrBust(){
+        game.addDealer();
+        game.addPlayer(player1);
+        game.addPlayer(player2);
+        game.getPlayers().get(0).setStuck(true);
+        player1.setStuck(true);
+        player2.addCard(cardTen);
+        player2.addCard(cardTen);
+        player2.addCard(cardTen);
+        player2.calcHandScores();
+        player2.checkIfBust();
+        assertEquals(true, game.checkRoundFinished());
     }
 
 }
