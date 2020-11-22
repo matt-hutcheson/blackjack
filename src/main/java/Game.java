@@ -5,9 +5,11 @@ public class Game {
     private ArrayList<Player> players;
     private Deck deck;
     private Player dealer;
+    private HashMap<String, ArrayList<Player>> results;
     public Game(Deck deck){
         this.deck = deck;
         this.players = new ArrayList<>();
+        this.results = new HashMap<>();
     }
 
     public void addPlayer(Player player){
@@ -52,8 +54,7 @@ public class Game {
         return draw;
     }
 
-    public HashMap<String, ArrayList<Player>> getResults(){
-        HashMap<String, ArrayList<Player>> results = new HashMap<>();
+    public void calcResults(){
         ArrayList<Player> wins = new ArrayList<>();
         ArrayList<Player> draws = new ArrayList<>();
         ArrayList<Player> losses = new ArrayList<>();
@@ -73,7 +74,10 @@ public class Game {
         results.put("Winners", wins);
         results.put("Draws", draws);
         results.put("Losers", losses);
-        return results;
+    }
+
+    public HashMap<String, ArrayList<Player>> getResults(){
+        return this.results;
     }
 
     public void dealerTurn(){

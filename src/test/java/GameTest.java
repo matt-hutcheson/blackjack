@@ -91,9 +91,9 @@ public class GameTest {
         game.getDealer().calcHandScores();
         player1.calcHandScores();
         player2.calcHandScores();
-        results = game.getResults();
-        assertEquals(player1, results.get("Winners").get(0));
-        assertEquals(player2, results.get("Winners").get(1));
+        game.calcResults();
+        assertEquals(player1, game.getResults().get("Winners").get(0));
+        assertEquals(player2, game.getResults().get("Winners").get(1));
     }
     @Test
     public void canCheckWinner__Dealer(){
@@ -113,9 +113,9 @@ public class GameTest {
         game.getDealer().calcHandScores();
         player1.calcHandScores();
         player2.calcHandScores();
-        results = game.getResults();
-        assertEquals(player1, results.get("Losers").get(0));
-        assertEquals(player2, results.get("Losers").get(1));
+        game.calcResults();
+        assertEquals(player1, game.getResults().get("Losers").get(0));
+        assertEquals(player2, game.getResults().get("Losers").get(1));
     }
     @Test
     public void canCheckWinner__Draw(){
@@ -135,9 +135,9 @@ public class GameTest {
         game.getDealer().calcHandScores();
         player1.calcHandScores();
         player2.calcHandScores();
-        results = game.getResults();
-        assertEquals(player1, results.get("Draws").get(0));
-        assertEquals(player2, results.get("Losers").get(0));
+        game.calcResults();
+        assertEquals(player1, game.getResults().get("Draws").get(0));
+        assertEquals(player2, game.getResults().get("Losers").get(0));
     }
     @Test
     public void checkDealerAI(){
