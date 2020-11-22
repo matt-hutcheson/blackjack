@@ -4,7 +4,7 @@ public class Player {
     private String name;
     private ArrayList<Card> hand;
     private ArrayList<Integer> results;
-    private Boolean bust;
+    private boolean bust;
     private boolean stuck;
     private boolean dealer;
 

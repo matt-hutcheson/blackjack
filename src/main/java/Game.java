@@ -75,4 +75,23 @@ public class Game {
         results.put("Losers", losses);
         return results;
     }
+
+    public void dealerTurn(){
+        int bestScore = 0;
+        for (Player player: players){
+            if (player.getBestScore() > bestScore){
+                bestScore = player.getBestScore();
+            }
+        }
+        do {
+            if (this.dealer.getBestScore() < 16 || this.dealer.getBestScore() < bestScore) {
+                dealCard(this.dealer);
+            }
+            this.dealer.calcHandScores();
+            this.dealer.checkIfBust();
+            if (this.dealer.getBestScore() > bestScore && !this.dealer.getBust()) {
+                this.dealer.setStuck(true);
+            }
+        } while (!this.dealer.getStuck() && !this.dealer.getBust());
+    }
 }

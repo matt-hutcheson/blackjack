@@ -154,8 +154,8 @@ public class GameTest {
         player2.setStuck(true);
         player1.calcHandScores();
         player2.calcHandScores();
-        Boolean expected = true;
-        game.dealerHaveTurn();
+        game.getDealer().calcHandScores();
+        game.dealerTurn();
         ArrayList<Boolean> turnEnded = new ArrayList<>();
         turnEnded.add(game.getDealer().getBust());
         turnEnded.add(game.getDealer().getStuck());
