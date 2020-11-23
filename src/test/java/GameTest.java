@@ -187,4 +187,38 @@ public class GameTest {
         assertFalse(player1.getBust());
         assertFalse(player1.getStuck());
     }
+    @Test
+    public void testBlackJackWins__PlayerWins(){
+        game.addDealer();
+        game.addPlayer(player1);
+        player1.addCard(cardAce);
+        player1.addCard(cardTen);
+        game.getDealer().addCard(cardTen);
+        game.getDealer().addCard(cardSix);
+        Card cardFive = new Card(SuitType.DIAMONDS, RankType.FIVE);
+        game.getDealer().addCard(cardFive);
+        game.getDealer().setStuck(true);
+        player1.setStuck(true);
+        player1.calcHandScores();
+        game.getDealer().calcHandScores();
+        game.calcResults();
+        assertTrue(game.getResults().get("Winners").contains(player1));
+    }
+    @Test
+    public void testBlackJackWins__DealerWins(){
+        game.addDealer();
+        game.addPlayer(player1);
+        game.getDealer().addCard(cardAce);
+        game.getDealer().addCard(cardTen);
+        player1.addCard(cardTen);
+        player1.addCard(cardSix);
+        Card cardFive = new Card(SuitType.DIAMONDS, RankType.FIVE);
+        player1.addCard(cardFive);
+        game.getDealer().setStuck(true);
+        player1.setStuck(true);
+        player1.calcHandScores();
+        game.getDealer().calcHandScores();
+        game.calcResults();
+        assertTrue(game.getResults().get("Losers").contains(player1));
+    }
 }

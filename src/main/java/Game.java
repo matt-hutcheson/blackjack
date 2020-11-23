@@ -61,6 +61,16 @@ public class Game {
         return draw;
     }
 
+    public boolean checkBlackJack(Player player){
+        boolean blackJack = false;
+        if (player.getBestScore() == 21){
+            if (player.getHand().get(0).getValue() == 1 && player.getHand().get(1).getValue() == 10 || player.getHand().get(0).getValue() == 10 && player.getHand().get(1).getValue() == 1){
+                blackJack = true;
+            }
+        }
+        return blackJack;
+    }
+
     public void calcResults(){
         ArrayList<Player> wins = new ArrayList<>();
         ArrayList<Player> draws = new ArrayList<>();
@@ -70,7 +80,13 @@ public class Game {
                 if (players.get(i).getBestScore() > dealer.getBestScore()){
                     wins.add(players.get(i));
                 } else if (checkDraw(players.get(i))){
-                    draws.add(players.get(i));
+                    if (checkBlackJack(players.get(i)) && checkBlackJack(dealer)) {
+                        draws.add(players.get(i));
+                    } else if (checkBlackJack(dealer)) {
+                        losses.add(players.get(i));
+                    } else if (checkBlackJack(players.get(i))){
+                        wins.add(players.get(i));
+                    }
                 } else {
                     losses.add(players.get(i));
                 }
